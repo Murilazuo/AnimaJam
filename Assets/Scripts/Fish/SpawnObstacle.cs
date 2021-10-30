@@ -15,6 +15,10 @@ public class SpawnObstacle : MonoBehaviour
     public bool stop = false;
     void Start()
     {
+        Invoke(nameof(StartSpawn), 2);
+    }
+    void StartSpawn()
+    {
         StartCoroutine(nameof(SpawnNewObstacle));
     }
 

@@ -6,18 +6,22 @@ public class FishMove : MonoBehaviour
 {
     [SerializeField] private float cameraLimitX, cameraLimitY;
     [SerializeField] private float speed = 200;
+    private float firtSpeed;
     [SerializeField] private float fishSpeedDecrease = 10;
     [SerializeField] private GameObject fishHook;
     Rigidbody2D rig;
     float inputX, inputY;
 
     SpawnObstacle spawnObstacle;
+    SoundFish soundFish;
     public static FishMove fishMove;
     void Start()
     {
         fishMove = this;
         spawnObstacle = FindObjectOfType<SpawnObstacle>();
         rig = GetComponent<Rigidbody2D>();
+        soundFish = GetComponent<SoundFish>();
+        firtSpeed = speed;
     }
     void Update()
     {
@@ -50,6 +54,14 @@ public class FishMove : MonoBehaviour
     {
         if (spawnObstacle.stop == true) return;
 
+        if (speed <= (firtSpeed / 3) * 2 && soundFish.audioFish.clip != soundFish.audioClip[1])
+        {
+            soundFish.StartCoroutine("SetAudioClip",1);
+        }
+        else if (speed <= (firtSpeed / 3) * 1 && soundFish.audioFish.clip != soundFish.audioClip[2])
+        {
+            soundFish.StartCoroutine("SetAudioClip",2);
+        }
         speed -= fishSpeedDecrease;
         
         if (speed <= 0)
@@ -58,6 +70,7 @@ public class FishMove : MonoBehaviour
             Instantiate(fishHook, new Vector2(transform.position.x, 10), Quaternion.identity);
             spawnObstacle.stop = true;
         }
+        
     }
     private void FixedUpdate()
     {
