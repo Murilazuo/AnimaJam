@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 1296838723}
   - component: {fileID: 1296838726}
   - component: {fileID: 1296838722}
+  - component: {fileID: 1296838727}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Player
@@ -155,9 +156,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc05bfd913562b6408b711b301ba4a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraLimitX: 4.5
-  CameraLimitY: 8.4
+  cameraLimitX: 8.4
+  cameraLimitY: 4.5
   speed: 200
+  fishSpeedDecrease: 10
 --- !u!50 &1296838723
 Rigidbody2D:
   serializedVersion: 4
@@ -238,7 +240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296838721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.4, y: -4.5, z: 0}
+  m_LocalPosition: {x: 2.59, y: 0.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -270,6 +272,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1296838727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296838721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c98946de12f1f24b920275af4cd008f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1317066810
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,7 +378,7 @@ GameObject:
   - component: {fileID: 2088447342}
   - component: {fileID: 2088447343}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -397,5 +411,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle: {fileID: 2375951586710903557, guid: c26119ab9bfb6f444b79a5f06398fa25, type: 3}
-  spawnRange: 8.87
-  timeToSpawn: 1
+  spawnRange: {x: 3.96, y: 8.9}
+  timeToSpawn: 3
+  spanwTimeDecrease: 0.1
+  minTimeToSpawn: 1
+  obstacleToSpawn: 0.5
+  obstacleToSpawnIncrease: 0.1
+  stop: 0

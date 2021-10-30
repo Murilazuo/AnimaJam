@@ -6,6 +6,7 @@ public class FishMove : MonoBehaviour
 {
     [SerializeField] private float cameraLimitX, cameraLimitY;
     [SerializeField] private float speed = 200;
+    [SerializeField] private float fishSpeedDecrease = 10;
     Rigidbody2D rig;
     float inputX, inputY;
     void Start()
@@ -34,7 +35,12 @@ public class FishMove : MonoBehaviour
             inputY = 0;
         }
     }
-
+    internal void DecreaseSpeed()
+    {
+        if (speed <= 0) return;
+        
+        speed -= fishSpeedDecrease;
+    }
     private void FixedUpdate()
     {
         rig.velocity = new Vector2( inputX * speed * Time.deltaTime, inputY * speed * Time.deltaTime);

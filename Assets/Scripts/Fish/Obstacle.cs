@@ -5,7 +5,8 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     Rigidbody2D rig;
-    [SerializeField] private float speed = 5; 
+    [SerializeField] private float speed = 5;
+    [SerializeField] private float positionXtoDestroy;
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -13,7 +14,14 @@ public class Obstacle : MonoBehaviour
     }
     public void Stop()
     {
-        rig.velocity = Vector2.zero;
+        rig.simulated = false;
     }
-   
+    private void Update()
+    {
+        if(rig.position.x <= positionXtoDestroy)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
