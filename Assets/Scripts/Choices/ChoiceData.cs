@@ -8,6 +8,8 @@ public class ChoiceData : ScriptableObject
     public string choiceText;
     public string choiceName;
     public ChoiceData[] choices;
+    public Sprite backGround;
+    public Sprite character;
 }
 
 [System.Serializable]

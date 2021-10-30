@@ -26,14 +26,16 @@ public class ChoiceManager : MonoBehaviour
 
     public void NewChoose(ChoiceData newChoice)
     {
-        int i = 0;
+        int indexButton = 0;
         currentChoice = newChoice;
         text.text = currentChoice.choiceText;
+        GameObject.FindGameObjectWithTag("BackGround").GetComponent<Image>().sprite = currentChoice.backGround;
+        GameObject.FindGameObjectWithTag("Character").GetComponent<Image>().sprite = currentChoice.character;
 
         foreach (Transform choiceBtn in transform)
         {
-            choiceBtn.GetComponent<ChoiceButton>().NewChoiceData(currentChoice.choices[i]);
-            i++;
+                    choiceBtn.GetComponent<ChoiceButton>().NewChoiceData(currentChoice.choices[indexButton]);
+                    indexButton++;
         }
     }
 }
