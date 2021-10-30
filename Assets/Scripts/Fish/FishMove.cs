@@ -7,10 +7,16 @@ public class FishMove : MonoBehaviour
     [SerializeField] private float cameraLimitX, cameraLimitY;
     [SerializeField] private float speed = 200;
     [SerializeField] private float fishSpeedDecrease = 10;
+    [SerializeField] private GameObject fishHook;
     Rigidbody2D rig;
     float inputX, inputY;
+
+    SpawnObstacle spawnObstacle;
+    public static FishMove fishMove;
     void Start()
     {
+        fishMove = this;
+        spawnObstacle = FindObjectOfType<SpawnObstacle>();
         rig = GetComponent<Rigidbody2D>();
     }
     void Update()
@@ -34,12 +40,24 @@ public class FishMove : MonoBehaviour
         {
             inputY = 0;
         }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            DecreaseSpeed();
+        }
     }
     internal void DecreaseSpeed()
     {
-        if (speed <= 0) return;
-        
+        if (spawnObstacle.stop == true) return;
+
         speed -= fishSpeedDecrease;
+        
+        if (speed <= 0)
+        {
+            speed = 0;
+            Instantiate(fishHook, new Vector2(transform.position.x, 10), Quaternion.identity);
+            spawnObstacle.stop = true;
+        }
     }
     private void FixedUpdate()
     {

@@ -160,6 +160,7 @@ MonoBehaviour:
   cameraLimitY: 4.5
   speed: 200
   fishSpeedDecrease: 10
+  fishHook: {fileID: 6651873620496411915, guid: 9e2e831c433abc6418d24f94d3bb475b, type: 3}
 --- !u!50 &1296838723
 Rigidbody2D:
   serializedVersion: 4
