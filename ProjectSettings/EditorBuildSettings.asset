@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 2c341191bd142204a9988229e074e476
+  - enabled: 1
     path: Assets/Scenes/Fish.unity
     guid: 64ce48bb8e90e1b438d8d6f583a777a9
   - enabled: 1
-    path: Assets/Scenes/Fisherman.unity
-    guid: 5ec3b6c2691e61d48935a69823027f32
+    path: Assets/Scenes/Choices.unity
+    guid: 0d6c5590d42f87c40b74f93216b42a36
   m_configObjects: {}

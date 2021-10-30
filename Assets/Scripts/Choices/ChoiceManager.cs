@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class ChoiceManager : MonoBehaviour
 {
     public ChoiceData currentChoice;
-
+    [SerializeField] private float money = 10;
+    
     Text text;
 
     public static ChoiceManager choiceManager;
@@ -28,14 +29,14 @@ public class ChoiceManager : MonoBehaviour
     {
         int indexButton = 0;
         currentChoice = newChoice;
+        money += newChoice.money;
         text.text = currentChoice.choiceText;
         GameObject.FindGameObjectWithTag("BackGround").GetComponent<Image>().sprite = currentChoice.backGround;
-        GameObject.FindGameObjectWithTag("Character").GetComponent<Image>().sprite = currentChoice.character;
 
         foreach (Transform choiceBtn in transform)
         {
-                    choiceBtn.GetComponent<ChoiceButton>().NewChoiceData(currentChoice.choices[indexButton]);
-                    indexButton++;
+                choiceBtn.GetComponent<ChoiceButton>().NewChoiceData(currentChoice.choices[indexButton]);
+                indexButton++;
         }
     }
 }

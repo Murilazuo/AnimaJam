@@ -231,4 +231,4 @@ MonoBehaviour:
   timeToGoBack: 1
   timeToCatchFish: 2
   timeToNextScene: 2
-  nextSceneName: Fisherman
+  nextSceneName: Choices

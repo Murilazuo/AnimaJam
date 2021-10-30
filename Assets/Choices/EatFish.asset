@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a26f9784310fe4f4abfd379b15df77bd, type: 3}
-  m_Name: Choice2
+  m_Name: EatFish
   m_EditorClassIdentifier: 
-  choiceText: Fazendo A
-  choiceName: Fazer A
-  idChoice: 0
+  choiceText: Fazendo C
+  choiceName: Levar o peixe para a familia
   choices:
   - {fileID: 11400000, guid: dda0b3d894e6a7041921936049106c98, type: 2}
   - {fileID: 11400000, guid: dda0b3d894e6a7041921936049106c98, type: 2}
-  - {fileID: 11400000, guid: dda0b3d894e6a7041921936049106c98, type: 2}
+  backGround: {fileID: 0}
+  money: 0

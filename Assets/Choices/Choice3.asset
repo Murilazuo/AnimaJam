@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choiceText: Fazendo B
   choiceName: Fazer B
-  idChoice: 0
   choices:
   - {fileID: 11400000, guid: dda0b3d894e6a7041921936049106c98, type: 2}
   - {fileID: 11400000, guid: dda0b3d894e6a7041921936049106c98, type: 2}
-  - {fileID: 11400000, guid: dda0b3d894e6a7041921936049106c98, type: 2}
+  backGround: {fileID: 0}
+  money: 0

@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a26f9784310fe4f4abfd379b15df77bd, type: 3}
-  m_Name: Choice1
+  m_Name: Fish
   m_EditorClassIdentifier: 
-  choiceText: "Alguma coisa est\xE1 acontecendo aqui"
+  choiceText: "Hummm esse peixe parece delicioso e \xE9 bem grande. acho que deveria
+    levar para casa...ou devo vende-lo no mercado? acredito que daria um bom dinheiro."
   choiceName: fazer alguma coisa
   choices:
   - {fileID: 11400000, guid: 86f8a5117073813499c19c283ef8b76e, type: 2}
-  - {fileID: 11400000, guid: a37f63092e524a940894f09e222ab7d8, type: 2}
   - {fileID: 11400000, guid: 6e4f85c35157afd46886381e417e3e4f, type: 2}
+  backGround: {fileID: 0}
+  money: 0

@@ -5,11 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newChoice", menuName = "Choice")]
 public class ChoiceData : ScriptableObject
 {
-    public string choiceText;
+    [TextArea]public string choiceText;
     public string choiceName;
     public ChoiceData[] choices;
     public Sprite backGround;
-    public Sprite character;
+    public float money;
 }
 
 [System.Serializable]
