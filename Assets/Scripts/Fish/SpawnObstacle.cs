@@ -24,8 +24,6 @@ public class SpawnObstacle : MonoBehaviour
 
     IEnumerator SpawnNewObstacle()
     {
-
-
         for (int i = Mathf.RoundToInt(obstacleToSpawn); i >= 0; i--){
 
             float y = Mathf.Round(Random.Range(0, spawnRange.y));

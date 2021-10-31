@@ -6,7 +6,6 @@ public class FishMove : MonoBehaviour
 {
     [SerializeField] private float cameraLimitX, cameraLimitY;
     [SerializeField] private float speed = 200;
-    private float firtSpeed;
     [SerializeField] private float fishSpeedDecrease = 10;
     [SerializeField] private GameObject fishHook;
     Rigidbody2D rig;
@@ -21,7 +20,6 @@ public class FishMove : MonoBehaviour
         spawnObstacle = FindObjectOfType<SpawnObstacle>();
         rig = GetComponent<Rigidbody2D>();
         soundFish = GetComponent<SoundFish>();
-        firtSpeed = speed;
     }
     void Update()
     {
@@ -44,28 +42,23 @@ public class FishMove : MonoBehaviour
         {
             inputY = 0;
         }
-
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            DecreaseSpeed();
-        }
     }
     internal void DecreaseSpeed()
     {
         if (spawnObstacle.stop == true) return;
 
-        if (speed <= (firtSpeed / 3) * 2 && soundFish.audioFish.clip != soundFish.audioClip[1])
+        if (speed <= 60 && soundFish.idAudio == 1)
         {
-            soundFish.StartCoroutine("SetAudioClip",1);
-        }
-        else if (speed <= (firtSpeed / 3) * 1 && soundFish.audioFish.clip != soundFish.audioClip[2])
+            soundFish.StartCoroutine("SetAudioClip", 2);
+        }else if (speed <= 120 && soundFish.idAudio == 0)
         {
-            soundFish.StartCoroutine("SetAudioClip",2);
+            soundFish.StartCoroutine("SetAudioClip", 1);
         }
         speed -= fishSpeedDecrease;
         
         if (speed <= 0)
         {
+            soundFish.StartCoroutine("StopAudio");
             speed = 0;
             Instantiate(fishHook, new Vector2(transform.position.x, 10), Quaternion.identity);
             spawnObstacle.stop = true;

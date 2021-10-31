@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public static bool mute;
-    public static float volume = 1;
+    public static float volume = 0.5f;
     
     public void Play()
     {
