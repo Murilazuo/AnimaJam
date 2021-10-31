@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Fish.unity
     guid: 64ce48bb8e90e1b438d8d6f583a777a9
   - enabled: 1
-    path: Assets/Scenes/Choices.unity
-    guid: 0d6c5590d42f87c40b74f93216b42a36
+    path: Assets/Scenes/GameOver.unity
+    guid: d79c2b5bdedb2714e9f1b2a0ec61fce0
   m_configObjects: {}

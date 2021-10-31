@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static float startTime;
-    public static float timeScore;
+    public static float timeScore = 0;
     public static int endId;
 
     public static GameManager gameManager;
@@ -22,9 +22,10 @@ public class GameManager : MonoBehaviour
 
     public void GameOver(int newEndId)
     {
+        SpawnObstacle.stop = true;
         endId = newEndId;
         timeScore = Time.time - startTime;
-        Invoke(nameof(GameOverScene),2);
+        Invoke(nameof(GameOverScene),5);
     }
 
     private void GameOverScene()

@@ -270,7 +270,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play
+  m_Text: Jogar
 --- !u!222 &317311431
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Credts
+  m_Text: Creditos
 --- !u!222 &374868700
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1237,7 +1237,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: WASD - Move
+  m_Text: 'WASD ou direcionais - para se mover
+
+    Desvie do lixo e colete comida'
 --- !u!222 &1460704831
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1316,7 +1318,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: How to play
+  m_Text: Como Jogar
 --- !u!222 &1528058264
 CanvasRenderer:
   m_ObjectHideFlags: 0

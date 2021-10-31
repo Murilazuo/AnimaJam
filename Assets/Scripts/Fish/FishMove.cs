@@ -5,9 +5,8 @@ using UnityEngine;
 public class FishMove : MonoBehaviour
 {
     [SerializeField] private float cameraLimitX, cameraLimitY;
-    [SerializeField] private float speed = 200;
+    public float speed = 200;
     [SerializeField] private float fishSpeedDecrease = 10;
-    [SerializeField] private GameObject fishHook;
     Rigidbody2D rig;
     float inputX, inputY;
 
@@ -45,12 +44,12 @@ public class FishMove : MonoBehaviour
     }
     internal void DecreaseSpeed()
     {
-        if (spawnObstacle.stop == true) return;
+        if (SpawnObstacle.stop) return;
 
-        if (speed <= 199 && soundFish.idAudio == 1)
+        if (speed <= 150 && soundFish.idAudio == 1)
         {
             soundFish.StartCoroutine("SetAudioClip", 2);
-        }else if (speed <= 100 && soundFish.idAudio == 0)
+        }else if (soundFish.idAudio == 0)
         {
             soundFish.StartCoroutine("SetAudioClip", 1);
         }
@@ -60,8 +59,8 @@ public class FishMove : MonoBehaviour
         {
             soundFish.StartCoroutine("StopAudio");
             speed = 0;
-            Instantiate(fishHook, new Vector2(transform.position.x, 10), Quaternion.identity);
-            spawnObstacle.stop = true;
+            GameManager.gameManager.GameOver(1);
+            SpawnObstacle.stop = true;
         }
         
     }

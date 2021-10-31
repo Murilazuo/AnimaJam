@@ -6,7 +6,7 @@ public class SoundFish : MonoBehaviour
 {
     [SerializeField] internal AudioClip[] audioClip;
     [SerializeField] internal AudioSource audioFish;
-    internal int idAudio;
+    internal int idAudio = 0;
     void Start()
     {
         audioFish.mute = Menu.mute;

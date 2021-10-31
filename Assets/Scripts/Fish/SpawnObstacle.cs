@@ -8,14 +8,18 @@ public class SpawnObstacle : MonoBehaviour
     [SerializeField] private Vector2 spawnRange;
     [SerializeField] private float timeToSpawn;
     [SerializeField] private float spanwTimeDecrease;
-    [SerializeField] private float minTimeToSpawn; 
+    [SerializeField] private float minTimeToSpawn;
+    [SerializeField] private float maxTimeToSpawn;
     [SerializeField] private float obstacleToSpawn;
     [SerializeField] private float obstacleToSpawnIncrease;
+    [SerializeField] private float maxObstacleToSpawn;
 
-    public bool stop = false;
+
+
+    public static bool stop = false;
     void Start()
     {
-        Invoke(nameof(StartSpawn), 2);
+        Invoke(nameof(StartSpawn), 3);
     }
     void StartSpawn()
     {
@@ -24,7 +28,11 @@ public class SpawnObstacle : MonoBehaviour
 
     IEnumerator SpawnNewObstacle()
     {
-        for (int i = Mathf.RoundToInt(obstacleToSpawn); i >= 0; i--){
+        if(obstacleToSpawn > maxObstacleToSpawn)
+        {
+            obstacleToSpawn = maxObstacleToSpawn;
+        }
+        for (int i = Mathf.RoundToInt(obstacleToSpawn); i > 0; i--){
 
             float y = Mathf.Round(Random.Range(0, spawnRange.y));
             float x = Random.Range(0, spawnRange.x);
@@ -35,10 +43,13 @@ public class SpawnObstacle : MonoBehaviour
         }
 
         yield return new WaitForSeconds(timeToSpawn);
-        obstacleToSpawn += obstacleToSpawnIncrease;
+        if(obstacleToSpawn >= 1)
+        {
+            obstacleToSpawn += obstacleToSpawnIncrease;
+        }
         
-        if (timeToSpawn > minTimeToSpawn)
-            timeToSpawn -= spanwTimeDecrease;
+        if (timeToSpawn > minTimeToSpawn && timeToSpawn < maxTimeToSpawn)
+            timeToSpawn += spanwTimeDecrease;
         
         if (!stop)
             StartCoroutine(nameof(SpawnNewObstacle));
