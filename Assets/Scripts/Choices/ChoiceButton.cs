@@ -8,15 +8,19 @@ public class ChoiceButton : MonoBehaviour
     public ChoiceData buttonChoiceData;
     [SerializeField] private Text text;
     ChoiceManager choiceManager;
-    private void Start()
+    public Button button;
+    private void Awake()
     {
         choiceManager = ChoiceManager.choiceManager;
-        //text = GetComponentInChildren<Text>();
+        button = GetComponent<Button>(); 
     }
     public void NewChoiceData(ChoiceData newChoiceData)
     {
-        buttonChoiceData = newChoiceData;
-        text.text = buttonChoiceData.choiceName;
+            buttonChoiceData = newChoiceData;
+        if (choiceManager.money < buttonChoiceData.moneyRequired)
+            button.interactable = false;
+        else button.interactable = true;
+            text.text = buttonChoiceData.choiceName;
     }
 
     public void Choose()

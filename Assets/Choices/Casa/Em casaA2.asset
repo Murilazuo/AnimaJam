@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a26f9784310fe4f4abfd379b15df77bd, type: 3}
+  m_Name: Em casaA2
+  m_EditorClassIdentifier: 
+  choiceText: "Mulher do S\xE9rgio: Querido, por favor, v\xE1 ao mercado e compre
+    os alimentos e suprimentos que vou lhe passar na lista. \xC9 de extrema import\xE2ncia
+    que voc\xEA siga as minhas anota\xE7\xF5es."
+  choiceName: Continuar
+  choices:
+  - {fileID: 11400000, guid: 5478f2553d490ce4f858cdf37da66015, type: 2}
+  backGround: {fileID: 0}
+  money: 0

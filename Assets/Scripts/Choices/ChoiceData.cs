@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [CreateAssetMenu(fileName = "newChoice", menuName = "Choice")]
 public class ChoiceData : ScriptableObject
 {
@@ -10,11 +11,5 @@ public class ChoiceData : ScriptableObject
     public ChoiceData[] choices;
     public Sprite backGround;
     public float money;
-}
-
-[System.Serializable]
-public struct TimelineVariable
-{
-    public int variable1;
-
+    public float moneyRequired = 0;
 }

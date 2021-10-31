@@ -47,10 +47,10 @@ public class FishMove : MonoBehaviour
     {
         if (spawnObstacle.stop == true) return;
 
-        if (speed <= 60 && soundFish.idAudio == 1)
+        if (speed <= 199 && soundFish.idAudio == 1)
         {
             soundFish.StartCoroutine("SetAudioClip", 2);
-        }else if (speed <= 120 && soundFish.idAudio == 0)
+        }else if (speed <= 100 && soundFish.idAudio == 0)
         {
             soundFish.StartCoroutine("SetAudioClip", 1);
         }
