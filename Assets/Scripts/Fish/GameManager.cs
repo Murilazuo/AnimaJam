@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         gameManager = this;
+        SpawnObstacle.stop = false;
         RestartTime();
     }
     public static void RestartTime()
