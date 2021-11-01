@@ -173,16 +173,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.7063107, g: 1, b: 0.7028302, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: 0f5c4be769e1cd54d8b221f6e306ecd2, type: 3}
+  m_Sprite: {fileID: -2936310939885475251, guid: 1a595eceee342a74499c83b1a7bcce2f, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -363,7 +363,7 @@ MonoBehaviour:
         m_MethodName: ChangeSprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 6504317842858912729, guid: 0f5c4be769e1cd54d8b221f6e306ecd2, type: 3}
+          m_ObjectArgument: {fileID: -2936310939885475251, guid: 1a595eceee342a74499c83b1a7bcce2f, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -772,16 +772,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.7063107, g: 1, b: 0.7028302, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2413806693520163455, guid: 04bd359035a89c9459e047ebe147c889, type: 3}
+  m_Sprite: {fileID: 7446720496096204217, guid: 1a595eceee342a74499c83b1a7bcce2f, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1634,7 +1634,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1326634016}
+  m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -1643,7 +1643,7 @@ MonoBehaviour:
         m_MethodName: ChangeSprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: -2413806693520163455, guid: 04bd359035a89c9459e047ebe147c889, type: 3}
+          m_ObjectArgument: {fileID: 7446720496096204217, guid: 1a595eceee342a74499c83b1a7bcce2f, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2928,3 +2928,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675eccda55116ac4a890dfa1e85a8e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSpr: {fileID: 7446720496096204217, guid: 1a595eceee342a74499c83b1a7bcce2f, type: 3}

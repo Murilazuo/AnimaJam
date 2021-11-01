@@ -872,9 +872,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endText:
-  - morto de fome
-  - preso no lixo
-  - pescado
+  - "O excesso de polui\xE7\xE3o deve ter acabado com a alimenta\xE7\xE3o do animal, 
+    isso acabou atrapalhando o seu percurso certo? Ajude o oceano e a vida marinha,
+    jogue o lixo no lixo! #SalveAVidaMarinha"
+  - "O animal acabou n\xE3o sobrevivendo devido a tamanha polui\xE7\xE3o humana.
+    Ajude o oceano, e os animais marinhos, n\xE3o jogue lixo em esgotos e em rios,
+    lugar de lixo \xE9 na lixeira. #SalveAVidaMarinha "
+  - Fomos pegos pelos humanos! Valeu a pena ter passado por tudo isso e ter chegado
+    a esse final?
 --- !u!114 &2082813766
 MonoBehaviour:
   m_ObjectHideFlags: 0
