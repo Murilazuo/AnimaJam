@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static float timeScore = 0;
     public static int endId;
 
+    [SerializeField] private Sprite[] sprites;
     public static GameManager gameManager;
     private void Awake()
     {
@@ -23,6 +24,14 @@ public class GameManager : MonoBehaviour
 
     public void GameOver(int newEndId)
     {
+        var playerSpr = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>();
+        if(playerSpr.sprite == sprites[0])
+        {
+            playerSpr.sprite = sprites[1];
+        }else
+        {
+            playerSpr.sprite = sprites[2];
+        }
         SpawnObstacle.stop = true;
         endId = newEndId;
         timeScore = Time.time - startTime;

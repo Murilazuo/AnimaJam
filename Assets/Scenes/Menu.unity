@@ -557,7 +557,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Nome do Jogo
+  m_Text: Garbage Run
 --- !u!222 &321743131
 CanvasRenderer:
   m_ObjectHideFlags: 0

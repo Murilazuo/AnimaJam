@@ -427,7 +427,7 @@ MonoBehaviour:
   cameraLimitX: 7.4
   cameraLimitY: 4.5
   speed: 200
-  fishSpeedDecrease: 10
+  fishSpeedDecrease: 25
 --- !u!50 &1296838723
 Rigidbody2D:
   serializedVersion: 4
