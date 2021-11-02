@@ -16,6 +16,7 @@ public class FishCollision : MonoBehaviour
         switch (collision.tag)
         {
             case "Obstacle":
+                if (SpawnObstacle.stop) return;
                 fishSoundFX.PlayObstacleFx(1);
                 fishMove.DecreaseSpeed();
                 collision.GetComponent<Obstacle>().Stop();

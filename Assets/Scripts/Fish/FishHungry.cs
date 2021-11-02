@@ -35,6 +35,7 @@ public class FishHungry : MonoBehaviour
     {
         if (collision.CompareTag("Food") && hungry < 100)
         {
+            if (SpawnObstacle.stop) return;
             fishSoundFX.PlayFoodFx();
             hungry += hungryBunus;
             Destroy(collision.gameObject);

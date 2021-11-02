@@ -10,7 +10,6 @@ public class SoundFish : MonoBehaviour
     internal int idAudio = 0;
     void Start()
     {
-        audioFish.mute = Menu.mute;
         StartCoroutine(nameof(SetAudioClip),0);
         soundFish = this;
     }

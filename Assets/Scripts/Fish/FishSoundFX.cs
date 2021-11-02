@@ -14,6 +14,10 @@ public class FishSoundFX : MonoBehaviour
     {
         fishSoundFx = this;
     }
+    private void Start()
+    {
+        audioSource.volume = Menu.volume;
+    }
     internal void PlayFoodFx()
     {
         RandonPitch();
