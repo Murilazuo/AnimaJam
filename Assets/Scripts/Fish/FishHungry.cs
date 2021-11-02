@@ -9,7 +9,12 @@ public class FishHungry : MonoBehaviour
     [SerializeField] private float hungryDecrease;
     [SerializeField] private float hungryBunus;
     [SerializeField] private Transform hungryBar;
-    
+    FishSoundFX fishSoundFX;
+    private void Start()
+    {
+        fishSoundFX = FishSoundFX.fishSoundFx;
+    }
+
     void Update()
     {
         if (SpawnObstacle.stop) return;
@@ -30,6 +35,7 @@ public class FishHungry : MonoBehaviour
     {
         if (collision.CompareTag("Food") && hungry < 100)
         {
+            fishSoundFX.PlayFoodFx();
             hungry += hungryBunus;
             Destroy(collision.gameObject);
         }
