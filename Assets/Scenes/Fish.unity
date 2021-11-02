@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675eccda55116ac4a890dfa1e85a8e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpr: {fileID: 0}
+  startSpr: {fileID: 7446720496096204217, guid: 1a595eceee342a74499c83b1a7bcce2f, type: 3}
 --- !u!1 &1296838721
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,7 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fc5bd142bba80f4db089c0377ee11cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hungryDecrease: 0.03
+  hungryDecrease: 0.1
   hungryBunus: 20
   hungryBar: {fileID: 294311680}
 --- !u!1 &1317066810
@@ -745,12 +745,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacle: {fileID: 6651873620496411915, guid: 9e2e831c433abc6418d24f94d3bb475b, type: 3}
   spawnRange: {x: 5, y: 4.02}
-  timeToSpawn: 10
+  timeToSpawn: 5
   spanwTimeDecrease: 0
   minTimeToSpawn: 0
   maxTimeToSpawn: 10
   obstacleToSpawn: 0.6
-  obstacleToSpawnIncrease: 0
+  obstacleToSpawnIncrease: 0.1
   maxObstacleToSpawn: 1
 --- !u!4 &2066814550
 Transform:

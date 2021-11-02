@@ -12,7 +12,7 @@ public class FishHungry : MonoBehaviour
     
     void Update()
     {
-        if (hungry >= 100) hungry = 100;
+        if (SpawnObstacle.stop) return;
 
         if(hungry <= 0)
         {
@@ -23,6 +23,7 @@ public class FishHungry : MonoBehaviour
             }
         }else hungry -= hungryDecrease;
 
+        hungry = Mathf.Clamp(hungry, 0, 100);
         hungryBar.localScale = new Vector2((hungry / 100) * 5, hungryBar.localScale.y);
     }
     private void OnTriggerEnter2D(Collider2D collision)

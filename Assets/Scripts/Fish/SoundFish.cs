@@ -5,12 +5,14 @@ using UnityEngine;
 public class SoundFish : MonoBehaviour
 {
     [SerializeField] internal AudioClip[] audioClip;
-    [SerializeField] internal AudioSource audioFish;
+    [SerializeField] public AudioSource audioFish;
+    public static SoundFish soundFish;
     internal int idAudio = 0;
     void Start()
     {
         audioFish.mute = Menu.mute;
         StartCoroutine(nameof(SetAudioClip),0);
+        soundFish = this;
     }
 
     internal IEnumerator SetAudioClip(int audioId)
@@ -33,7 +35,7 @@ public class SoundFish : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
     }
 
-    internal IEnumerator StopAudio()
+    public IEnumerator StopAudio()
     {
         while (audioFish.volume > 0)
         {

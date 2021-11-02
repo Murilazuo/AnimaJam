@@ -10,7 +10,9 @@ public class RandonSprite : MonoBehaviour
     void Start()
     {
         spr = GetComponent<SpriteRenderer>();
-        spr.sprite = sprites[Random.Range(0, sprites.Length - 1)];
+        spr.sprite = sprites[Random.Range(0, sprites.Length)];
+
+        transform.Rotate(new Vector3(0,0, Random.Range(0,360)));
     }
 
 }

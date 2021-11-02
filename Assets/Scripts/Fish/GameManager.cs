@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
         {
             playerSpr.sprite = sprites[2];
         }
+        SoundFish.soundFish.StartCoroutine("SetAudioClip", 3);
+        SoundFish.soundFish.audioFish.loop = false;
         SpawnObstacle.stop = true;
         endId = newEndId;
         timeScore = Time.time - startTime;
