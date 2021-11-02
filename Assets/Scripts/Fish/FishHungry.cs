@@ -5,6 +5,7 @@ using UnityEngine;
 public class FishHungry : MonoBehaviour
 {
     internal float hungry = 100;
+    internal bool fim=false;
     [SerializeField] private float hungryDecrease;
     [SerializeField] private float hungryBunus;
     [SerializeField] private Transform hungryBar;
@@ -16,7 +17,10 @@ public class FishHungry : MonoBehaviour
         if(hungry <= 0)
         {
             GetComponent<FishMove>().speed = 0;
-            GameManager.gameManager.GameOver(0);
+            if(fim==false){
+                GameManager.gameManager.GameOver(0);
+                fim=true;
+            }
         }else hungry -= hungryDecrease;
 
         hungryBar.localScale = new Vector2((hungry / 100) * 5, hungryBar.localScale.y);
