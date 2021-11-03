@@ -238,7 +238,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -4.799988, y: 109}
-  m_SizeDelta: {x: 1801, y: 610.188}
+  m_SizeDelta: {x: 3402.7, y: 783}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &111548087
 MonoBehaviour:
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -952,10 +952,11 @@ MonoBehaviour:
     isso acabou atrapalhando o seu percurso certo? Ajude o oceano e a vida marinha,
     jogue o lixo no lixo! #SalveAVidaMarinha"
   - "O animal acabou n\xE3o sobrevivendo devido a tamanha polui\xE7\xE3o humana.
-    Ajude o oceano, e os animais marinhos, n\xE3o jogue lixo em esgotos e em rios,
+    Ajude o oceano e os animais marinhos, n\xE3o jogue lixo em esgotos e em rios,
     lugar de lixo \xE9 na lixeira. #SalveAVidaMarinha "
-  - Fomos pegos pelos humanos! Valeu a pena ter passado por tudo isso e ter chegado
-    a esse final?
+  - "Fomos pegos pelos humanos! Infelizmente muitos animais s\xE3o v\xEDtimas de
+    uma pesca predat\xF3ria, desenfreada e insustent\xE1vel. Continuar com esse comportamento
+    pode acabar com toda a biodiversidade marinha"
 --- !u!114 &2082813766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -969,8 +970,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
