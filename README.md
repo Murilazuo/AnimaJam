@@ -1,2 +1,2 @@
 # GarbageRun
-Link para build: murilo-bezerra.itch.io/garbage-run
+[Link para build]([/guides/content/editing-an-existing-page](https://murilo-bezerra.itch.io/garbage-run))
