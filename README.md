@@ -1,2 +1,2 @@
 # GarbageRun
-Jogo ganhador da Game Jam Ânima Inpact game 
+Link para build: murilo-bezerra.itch.io/garbage-run
